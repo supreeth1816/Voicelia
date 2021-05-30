@@ -51,6 +51,9 @@ flutter:
     - assets/LaunchLogo.png
     - assets/Mic.png
     - assets/save.png
+    - assets/AutismTestCard.png
+    - assets/AutismTherapyCard.png
+    - KnowAboutAutismCard.png
 
   #   - images/a_dot_ham.jpeg
 

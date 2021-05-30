@@ -65,8 +65,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: w/2,
                     height: 60,
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-
+                        SizedBox(width: 10,),
+                        Image(image: AssetImage('assets/Mic.png')),
+                        SizedBox(width: 10,),
 
                         Text("Speak", style: GoogleFonts.poppins(
                           fontSize: 18,
@@ -81,19 +84,50 @@ class _HomeScreenState extends State<HomeScreen> {
                     //width: w/2,
                     child: Row(
                       children: [
+                        Image(image: AssetImage('assets/save.png')),
+                        SizedBox(width: 10,),
 
                         Text("Save", style: GoogleFonts.poppins(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                           color: Color(0xff808080),
                         ),),
+                        SizedBox(width: 10,),
                       ],
 
                     ),
                   ),
 
                 ],
-              )
+              ),
+
+              SizedBox(height: 28,),
+
+              Container(
+                margin: EdgeInsets.only(left: 28, right: 28),
+
+                child: Image(image: AssetImage('assets/AutismTestCard.png'),),
+              ),
+
+              SizedBox(height: 24,),
+
+              Container(
+                margin: EdgeInsets.only(left: 28, right: 28),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    Image(image: AssetImage('assets/KnowAboutAutismCard.png'),
+                    height: 200,),
+                    SizedBox(width: 24,),
+                    Image(image: AssetImage('assets/AutismTherapyCard.png'),height: 200,),
+
+                  ],
+                ),
+              ),
+
+
+
             ],
           ),
         ),
