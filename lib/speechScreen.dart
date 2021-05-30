@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:voicelia/homeScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
+import 'dart:async';
+
+final FlutterTts flutterTts = FlutterTts();
+
+speak() async {
+
+  await flutterTts.speak(EnteredText);
+}
+
+
+//enum TtsState { playing, stopped }
 
 class SpeechScreen extends StatefulWidget {
   @override
@@ -9,8 +21,115 @@ class SpeechScreen extends StatefulWidget {
 }
 
 class _SpeechScreenState extends State<SpeechScreen> {
+
+
+
+
+
+  // dynamic languages;
+  // String language;
+  // double volume = 0.5;
+  // double pitch = 1.0;
+  // double rate = 0.5;
+  // TtsState ttsState = TtsState.stopped;
+  //
+  // get isPlaying => ttsState == TtsState.playing;
+  // get isStopped => ttsState == TtsState.stopped;
+
+
+  @override
+  initState() {
+    super.initState();
+    speak();
+    //initTts();
+
+  }
+
+  // initTts() {
+  //   flutterTts = FlutterTts();
+  //   _getLanguages();
+  //   flutterTts.setStartHandler(() {
+  //     setState(() {
+  //       print("playing");
+  //       ttsState = TtsState.playing;
+  //     });
+  //   });
+  //
+  //   flutterTts.setCompletionHandler(() {
+  //     setState(() {
+  //       print("Complete");
+  //       ttsState = TtsState.stopped;
+  //     });
+  //   });
+  //
+  //   flutterTts.setErrorHandler((msg) {
+  //     setState(() {
+  //       print("error: $msg");
+  //       ttsState = TtsState.stopped;
+  //     });
+  //   });
+  // }
+
+  // Future _getLanguages() async {
+  //   languages = await flutterTts.getLanguages;
+  //   print("languages:  ${languages}");
+  //   if (languages != null) setState(() => languages);
+  // }
+  //
+  // Future _speak() async {
+  //   await flutterTts.setVolume(volume);
+  //   await flutterTts.setSpeechRate(rate);
+  //   await flutterTts.setPitch(pitch);
+  //
+  //   if (EnteredText != null) {
+  //     if (EnteredText.isNotEmpty) {
+  //       var result = await flutterTts.speak(EnteredText);
+  //       if (result == 1) setState(() => ttsState = TtsState.playing);
+  //     }
+  //   }
+  // }
+  //
+  // Future _stop() async {
+  //   var result = await flutterTts.stop();
+  //   if (result == 1) setState(() => ttsState = TtsState.stopped);
+  // }
+  //
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  //   flutterTts.stop();
+  // }
+  //
+  // List<DropdownMenuItem<String>> getLanguageDropDownMenuItems() {
+  //   var items = List<DropdownMenuItem<String>>();
+  //   for (String type in languages) {
+  //     items.add(DropdownMenuItem(value: type, child: Text(type)));
+  //   }
+  //   return items;
+  // }
+  //
+  // void changedLanguageDropDownItem(String selectedType) {
+  //   setState(() {
+  //     language = selectedType;
+  //     flutterTts.setLanguage(language);
+  //   });
+  // }
+
+  void _onChange(String text) {
+    setState(() {
+      EnteredText = text;
+    });
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
+    
+
+    
+    
     return Scaffold(
 
 
@@ -70,6 +189,14 @@ class _SpeechScreenState extends State<SpeechScreen> {
                   ),
                   ),
                 ),
+
+              GestureDetector(
+                onTap: speak,
+
+                child: Container(
+                  child: Text("Play"),
+                ),
+              )
 
 
 
