@@ -30,7 +30,19 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 220,),
 
               Image(image: AssetImage('assets/LaunchLogo.png'),
-              height: 238,)
+              height: 238,),
+              SizedBox(height: 240,),
+
+              GestureDetector(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Quiz1())),
+                child: Container(
+                  width: 340,
+                  height: 48,
+                  color: Colors.white,
+                  child: Center(child: Text("Get Started")),
+                ),
+              ),
+
             ],
           ),
         ),
