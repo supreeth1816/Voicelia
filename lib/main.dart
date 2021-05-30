@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:voicelia/autismTest.dart';
+import 'package:voicelia/homeScreen.dart';
 
 void main(){
   runApp(
       new MaterialApp(
         debugShowCheckedModeBanner: false,
 
-        home: new HomeScreen(),
+        home: new StartScreen(),
 
       )
   );
 }
 
 
-class HomeScreen extends StatefulWidget {
+class StartScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _StartScreenState createState() => _StartScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 240,),
 
               GestureDetector(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Quiz1())),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen())),
                 child: Container(
                   width: 340,
                   height: 48,
