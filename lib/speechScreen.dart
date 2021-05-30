@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:voicelia/homeScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:lottie/lottie.dart';
 
 import 'dart:async';
 
@@ -196,7 +197,18 @@ class _SpeechScreenState extends State<SpeechScreen> {
                 child: Container(
                   child: Text("Play"),
                 ),
-              )
+              ),
+
+
+              SizedBox(height: 40,),
+
+              Lottie.asset('assets/speaking.json',
+              repeat: false,
+              ),
+
+
+
+
 
 
 
