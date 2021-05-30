@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voicelia/autismTest.dart';
+import 'package:voicelia/speechScreen.dart';
 
 
-
+String EnteredText;
 
 
 class HomeScreen extends StatefulWidget {
@@ -64,9 +65,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontSize: 17,
                   )),
                   style: GoogleFonts.poppins(
-                    fontSize: 18,
+                    fontSize: 17,
                     color: Color(0xff3a3a3a)
                   ),
+
+                  onChanged: (val){
+                    setState(() {
+                      EnteredText = val;
+                    });
+                  },
                 ),
               ),
 
@@ -75,22 +82,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
 
-                  Container(
-                    width: w/2,
-                    height: 60,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(width: 10,),
-                        Image(image: AssetImage('assets/Mic.png')),
-                        SizedBox(width: 10,),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SpeechScreen()));
+                      print(EnteredText);
+                    },
+                    child: Container(
+                      width: w/2,
+                      height: 60,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(width: 10,),
+                          Image(image: AssetImage('assets/Mic.png')),
+                          SizedBox(width: 10,),
 
-                        Text("Speak", style: GoogleFonts.poppins(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xfff96e90),
-                        ),),
-                      ],
+                          Text("Speak", style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xfff96e90),
+                          ),),
+                        ],
+                      ),
                     ),
                   ),
 
