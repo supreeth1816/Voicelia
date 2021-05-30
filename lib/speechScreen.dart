@@ -29,8 +29,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
                     child: Container(
                       padding: EdgeInsets.only(left: 16),
 
-                      child: Icon(Icons.arrow_back_ios_outlined, color: Color(
-                        0xffc9496a),),),
+                      child: Icon(Icons.arrow_back_ios_outlined, color: Colors.black26,),),
                   ),
 
                   Container(
@@ -39,6 +38,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
                     child: Text("Voicelia",
                       style: GoogleFonts.satisfy(
                           fontSize: 30,
+
                           color: Color(0xfff06083)
 
                       ),),
@@ -59,12 +59,13 @@ class _SpeechScreenState extends State<SpeechScreen> {
                   borderRadius: BorderRadius.circular(15),
 
                 ),
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.only(left: 24, right: 24, top: 28, bottom: 26),
 
                 child: Text(
                   EnteredText,
                   style: GoogleFonts.poppins(
                       fontSize: 17,
+                      fontWeight: FontWeight.w500,
                       color: Color(0xffCA5764)
                   ),
                   ),
