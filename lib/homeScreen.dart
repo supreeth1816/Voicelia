@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:voicelia/autismTest.dart';
 
 
 
@@ -46,13 +47,26 @@ class _HomeScreenState extends State<HomeScreen> {
 
               Container(
                 height: 186,
-                margin: EdgeInsets.only(left: 28, right: 28),
+                margin: EdgeInsets.only(left: 24, right: 24),
 
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(color: Color(0xffe2e2e2), width: 2),
                   borderRadius: BorderRadius.circular(15),
 
+                ),
+                padding: EdgeInsets.all(20),
+
+                child: TextField(
+                  maxLines: 6,
+                  decoration: InputDecoration.collapsed(
+                      hintText: "Enter your text here ", hintStyle: GoogleFonts.poppins(
+                    fontSize: 17,
+                  )),
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    color: Color(0xff3a3a3a)
+                  ),
                 ),
               ),
 
@@ -101,26 +115,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
 
-              SizedBox(height: 28,),
+              SizedBox(height: 24,),
 
-              Container(
-                margin: EdgeInsets.only(left: 28, right: 28),
+              GestureDetector(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Quiz1())),
+                child: Container(
+                  margin: EdgeInsets.only(left: 24, right: 24),
 
-                child: Image(image: AssetImage('assets/AutismTestCard.png'),),
+                  child: Image(image: AssetImage('assets/AutismTestCard.png'),),
+                ),
               ),
 
               SizedBox(height: 24,),
 
               Container(
-                margin: EdgeInsets.only(left: 28, right: 28),
+                margin: EdgeInsets.only(left: 24, right: 24),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
 
                     Image(image: AssetImage('assets/KnowAboutAutismCard.png'),
-                    height: 200,),
+                    height: 204,),
                     SizedBox(width: 24,),
-                    Image(image: AssetImage('assets/AutismTherapyCard.png'),height: 200,),
+                    Image(image: AssetImage('assets/AutismTherapyCard.png'),height: 204,),
 
                   ],
                 ),
