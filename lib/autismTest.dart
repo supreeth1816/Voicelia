@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'startQuizScreen.dart';
+
+
+
 
 
 var finalScoreA1 = 0.0;
@@ -28,16 +33,18 @@ var questionNumber = 0;
 var quiz = new AnimalQuiz();
 
 class AnimalQuiz{
-  var images = [
-    "alligator", "cat", "dog", "owl"
-  ];
+
+
+  // var images = [
+  //   "alligator", "cat", "dog", "owl"
+  // ];
 
 
   var questions = [
 
     //domain A1 social-emotional reciprocity
 
-    "X has an unusual approach to people (intrusive touching or licking)",
+    "${NameText} has an unusual approach to people",
     "X can use you or others as a tool (i.e. hold your hand and point to things with your hand or use it like attempting to open a door turning the knob with your hand))",
     "It feels like X doesn’t respond when X’s name is called or when X is spoken directly to",
     "It feels like X is having a one-sided conversation with you- as if X is not interested in your side of conversation",
@@ -66,7 +73,7 @@ class AnimalQuiz{
 
     //domain A2 Non verbal communication
 
-    "X’s facial expressions are limited or are exaggerated in range and mode",
+    "${NameText}’s facial expressions are limited",
     "X has an unusual approach to people (intrusive touching or licking)",
     "X does not use or understand body postures (i.e. seen to be looking away from someone who is talking to him- or understand that other person is not interested from their body language)",
     "X does not use gestures appropriately (e.g. actions like pointing, waving, nodding/shaking head, beckoning, shushing, putting out hands to ask for something)",
@@ -183,13 +190,13 @@ class AnimalQuiz{
 
   var choices = [
 
-    "Never Seen an Issue",
+    "Never seen this issue",
 
-    "Was an Issue , Not Anymore",
+    "This was an Issue ,Not Anymore",
 
-    "Ocassionally to Frequently",
+    "Ocassionally observed",
 
-    "Very Frequently"
+    "Frequently observed"
 
   ];
 
@@ -211,245 +218,257 @@ class Quiz1State extends State<Quiz1> {
         onWillPop: () async => false,
         child: Scaffold(
 
-          body: new Container(
-            margin: const EdgeInsets.all(10.0),
-            alignment: Alignment.topCenter,
-            child: new Column(
-              children: <Widget>[
-                new Padding(padding: EdgeInsets.all(20.0)),
-
-                new Container(
-                  alignment: Alignment.centerRight,
-                  child: new Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-
-                      new Text("Question ${questionNumber + 1} of ${quiz.questions.length}",
-                        style: new TextStyle(
-                            fontSize: 18.0
-                        ),),
+          body: SafeArea(
+            child: new Container(
+            //  margin: const EdgeInsets.all(10.0),
+              alignment: Alignment.topCenter,
+              child: new Column(
+                children: <Widget>[
 
 
-                    ],
+
+                  SizedBox(height: 20,),
+
+                  Container(
+                    padding: EdgeInsets.only(top: 0, left: 36),
+                    width: double.infinity,
+                    child: Text("Voicelia",
+                      style: GoogleFonts.satisfy(
+                          fontSize: 30,
+                          color: Color(0xfff06083)
+
+                      ),),
                   ),
-                ),
 
 
-                //image
-                new Padding(padding: EdgeInsets.all(20.0)),
+                  new Container(
+                    alignment: Alignment.centerRight,
+                    padding: EdgeInsets.only(top: 0, left: 36),
+                    child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
 
-//                new Image.asset(
-//                  "images/${quiz.images[questionNumber]}.jpg",
-//                ),
-
-                new Padding(padding: EdgeInsets.all(20.0)),
-
-                new Text(quiz.questions[questionNumber],
-                  style: new TextStyle(
-                    fontSize: 20.0,
-                  ),),
-
-                new Padding(padding: EdgeInsets.all(10.0)),
+                        new Text("Question ${questionNumber + 1} of ${quiz.questions.length}",
+                          style: GoogleFonts.poppins(
+                              fontSize: 15.0,
+                              color: Colors.black54
+                          ),),
 
 
-
-                //button 1
-                //never seen an issue 0
-
-                new MaterialButton(
-
-                  minWidth: 120.0,
-                  color: Colors.blueGrey,
-                  onPressed: (){
-
-                    if(questionNumber < 25){
-                      attemptedquestionsA1++;
-                    }else if (questionNumber <38) {
-                      attemptedquestionsA2++;
-                    }else if (questionNumber < 63) {
-                      attemptedquestionsA3++;
-                    }else if (questionNumber < 77) {
-                      attemptedquestionsB1++;
-                    }else if (questionNumber < 88) {
-                      attemptedquestionsB2++;
-                    }else if (questionNumber < 97) {
-                      attemptedquestionsB3++;
-                    }else if (questionNumber < 105) {
-                      attemptedquestionsB4++;
-                    }
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10,),
 
 
-                    updateQuestion();
-                  },
-                  child: new Text(quiz.choices[0],
+
+
+
+                  new Text(quiz.questions[questionNumber],
                     style: new TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white
+                      fontSize: 20.0,
                     ),),
-                ),
 
-                new Padding(padding: EdgeInsets.all(10.0)),
-
-                //button 2
-                //Was an Issue , Not Anymore 1
-                new MaterialButton(
-
-                  //
-                  minWidth: 120.0,
-                  color: Colors.blueGrey,
-                  onPressed: (){
-
-                    if(questionNumber < 25){
-
-                      finalScoreA1+=1;
-                      attemptedquestionsA1++;
-
-                    }else if (questionNumber <38) {
-                      finalScoreA2+=1;
-                      attemptedquestionsA2++;
-                    }else if (questionNumber < 63) {
-                      finalScoreA3+=1;
-                      attemptedquestionsA3++;
-                    }else if (questionNumber < 77) {
-                      finalScoreB1+=1;
-                      attemptedquestionsB1++;
-                    }else if (questionNumber < 88) {
-                      finalScoreB2+=1;
-                      attemptedquestionsB2++;
-                    }else if (questionNumber < 97) {
-                      finalScoreB3+=1;
-                      attemptedquestionsB3++;
-                    }else if (questionNumber < 105) {
-                      finalScoreB4+=1;
-                      attemptedquestionsB4++;
-                    }else if (questionNumber == 105) {
-                      finalScoreC = 1;
-                    }else if (questionNumber == 106) {
-                      finalScoreD = 1;
-                    }
-
-                    updateQuestion();
-
-                  },
-                  child: new Text(quiz.choices[1],
-                    style: new TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white
-                    ),),
-                ),
-
-                new Padding(padding: EdgeInsets.all(10.0)),
-
-                //button 3
-                //"Ocassionally to Frequently" 2
-                new MaterialButton(
-                  minWidth: 120.0,
-                  color: Colors.blueGrey,
-                  onPressed: (){
-
-                    if(questionNumber < 25){
-                      finalScoreA1+=2;
-                      attemptedquestionsA1++;
-                    }else if (questionNumber <38) {
-                      finalScoreA2+=2;
-                      attemptedquestionsA2++;
-                    }else if (questionNumber < 63) {
-                      finalScoreA3+=2;
-                      attemptedquestionsA3++;
-                    }else if (questionNumber < 77) {
-                      finalScoreB1+=2;
-                      attemptedquestionsB1++;
-                    }else if (questionNumber < 88) {
-                      finalScoreB2+=2;
-                      attemptedquestionsB2++;
-                    }else if (questionNumber < 97) {
-                      finalScoreB3+=2;
-                      attemptedquestionsB3++;
-                    }else if (questionNumber < 105) {
-                      finalScoreB4+=2;
-                      attemptedquestionsB4++;
-                    }else if (questionNumber == 105) {
-                      finalScoreC = 2;
-                    }else if (questionNumber == 106) {
-                      finalScoreD = 2;
-                    }
-
-                    updateQuestion();
-                  },
-                  child: new Text(quiz.choices[2],
-                    style: new TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white
-                    ),),
-                ),
-                new Padding(padding: EdgeInsets.all(10.0)),
-                //button 4
-                //Very Frequently 3
-                new MaterialButton(
-                  minWidth: 120.0,
-                  color: Colors.blueGrey,
-                  onPressed: (){
-
-                    if(questionNumber < 25){
-                      finalScoreA1+=3;
-                      attemptedquestionsA1++;
-                    }else if (questionNumber <38) {
-                      finalScoreA2+=3;
-                      attemptedquestionsA2++;
-                    }else if (questionNumber < 63) {
-                      finalScoreA3+=3;
-                      attemptedquestionsA3++;
-                    }else if (questionNumber < 77) {
-                      finalScoreB1+=3;
-                      attemptedquestionsB1++;
-                    }else if (questionNumber < 88) {
-                      finalScoreB2+=3;
-                      attemptedquestionsB2++;
-                    }else if (questionNumber < 97) {
-                      finalScoreB3+=3;
-                      attemptedquestionsB3++;
-                    }else if (questionNumber < 105) {
-                      finalScoreB4+=3;
-                      attemptedquestionsB4++;
-                    }else if (questionNumber == 105) {
-                      finalScoreC = 3;
-                    }else if (questionNumber == 106) {
-                      finalScoreD = 3;
-                    }
-
-                    updateQuestion();
-
-                  },
-                  child: new Text(quiz.choices[3],
-                    style: new TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white
-                    ),),
-                ),
+                  new Padding(padding: EdgeInsets.all(10.0)),
 
 
 
-                new Padding(padding: EdgeInsets.all(10.0)),
+                  //button 1
+                  //never seen an issue 0
 
-                new Container(
-                    alignment: Alignment.bottomCenter,
-                    child:  new MaterialButton(
-                        minWidth: 240.0,
-                        height: 30.0,
-                        color: Colors.red,
-                        onPressed: resetQuiz,
-                        child: new Text("Quit",
-                          style: new TextStyle(
-                              fontSize: 8.0,
-                              color: Colors.white
-                          ),)
-                    )
-                ),
+                  new MaterialButton(
+
+                    minWidth: 120.0,
+                    color: Colors.blueGrey,
+                    onPressed: (){
+
+                      if(questionNumber < 25){
+                        attemptedquestionsA1++;
+                      }else if (questionNumber <38) {
+                        attemptedquestionsA2++;
+                      }else if (questionNumber < 63) {
+                        attemptedquestionsA3++;
+                      }else if (questionNumber < 77) {
+                        attemptedquestionsB1++;
+                      }else if (questionNumber < 88) {
+                        attemptedquestionsB2++;
+                      }else if (questionNumber < 97) {
+                        attemptedquestionsB3++;
+                      }else if (questionNumber < 105) {
+                        attemptedquestionsB4++;
+                      }
+
+
+                      updateQuestion();
+                    },
+                    child: new Text(quiz.choices[0],
+                      style: new TextStyle(
+                          fontSize: 10.0,
+                          color: Colors.white
+                      ),),
+                  ),
+
+                  new Padding(padding: EdgeInsets.all(10.0)),
+
+                  //button 2
+                  //Was an Issue , Not Anymore 1
+                  new MaterialButton(
+
+                    //
+                    minWidth: 120.0,
+                    color: Colors.blueGrey,
+                    onPressed: (){
+
+                      if(questionNumber < 25){
+
+                        finalScoreA1+=1;
+                        attemptedquestionsA1++;
+
+                      }else if (questionNumber <38) {
+                        finalScoreA2+=1;
+                        attemptedquestionsA2++;
+                      }else if (questionNumber < 63) {
+                        finalScoreA3+=1;
+                        attemptedquestionsA3++;
+                      }else if (questionNumber < 77) {
+                        finalScoreB1+=1;
+                        attemptedquestionsB1++;
+                      }else if (questionNumber < 88) {
+                        finalScoreB2+=1;
+                        attemptedquestionsB2++;
+                      }else if (questionNumber < 97) {
+                        finalScoreB3+=1;
+                        attemptedquestionsB3++;
+                      }else if (questionNumber < 105) {
+                        finalScoreB4+=1;
+                        attemptedquestionsB4++;
+                      }else if (questionNumber == 105) {
+                        finalScoreC = 1;
+                      }else if (questionNumber == 106) {
+                        finalScoreD = 1;
+                      }
+
+                      updateQuestion();
+
+                    },
+                    child: new Text(quiz.choices[1],
+                      style: new TextStyle(
+                          fontSize: 10.0,
+                          color: Colors.white
+                      ),),
+                  ),
+
+                  new Padding(padding: EdgeInsets.all(10.0)),
+
+                  //button 3
+                  //"Ocassionally to Frequently" 2
+                  new MaterialButton(
+                    minWidth: 120.0,
+                    color: Colors.blueGrey,
+                    onPressed: (){
+
+                      if(questionNumber < 25){
+                        finalScoreA1+=2;
+                        attemptedquestionsA1++;
+                      }else if (questionNumber <38) {
+                        finalScoreA2+=2;
+                        attemptedquestionsA2++;
+                      }else if (questionNumber < 63) {
+                        finalScoreA3+=2;
+                        attemptedquestionsA3++;
+                      }else if (questionNumber < 77) {
+                        finalScoreB1+=2;
+                        attemptedquestionsB1++;
+                      }else if (questionNumber < 88) {
+                        finalScoreB2+=2;
+                        attemptedquestionsB2++;
+                      }else if (questionNumber < 97) {
+                        finalScoreB3+=2;
+                        attemptedquestionsB3++;
+                      }else if (questionNumber < 105) {
+                        finalScoreB4+=2;
+                        attemptedquestionsB4++;
+                      }else if (questionNumber == 105) {
+                        finalScoreC = 2;
+                      }else if (questionNumber == 106) {
+                        finalScoreD = 2;
+                      }
+
+                      updateQuestion();
+                    },
+                    child: new Text(quiz.choices[2],
+                      style: new TextStyle(
+                          fontSize: 10.0,
+                          color: Colors.white
+                      ),),
+                  ),
+                  new Padding(padding: EdgeInsets.all(10.0)),
+                  //button 4
+                  //Very Frequently 3
+                  new MaterialButton(
+                    minWidth: 120.0,
+                    color: Colors.blueGrey,
+                    onPressed: (){
+
+                      if(questionNumber < 25){
+                        finalScoreA1+=3;
+                        attemptedquestionsA1++;
+                      }else if (questionNumber <38) {
+                        finalScoreA2+=3;
+                        attemptedquestionsA2++;
+                      }else if (questionNumber < 63) {
+                        finalScoreA3+=3;
+                        attemptedquestionsA3++;
+                      }else if (questionNumber < 77) {
+                        finalScoreB1+=3;
+                        attemptedquestionsB1++;
+                      }else if (questionNumber < 88) {
+                        finalScoreB2+=3;
+                        attemptedquestionsB2++;
+                      }else if (questionNumber < 97) {
+                        finalScoreB3+=3;
+                        attemptedquestionsB3++;
+                      }else if (questionNumber < 105) {
+                        finalScoreB4+=3;
+                        attemptedquestionsB4++;
+                      }else if (questionNumber == 105) {
+                        finalScoreC = 3;
+                      }else if (questionNumber == 106) {
+                        finalScoreD = 3;
+                      }
+
+                      updateQuestion();
+
+                    },
+                    child: new Text(quiz.choices[3],
+                      style: new TextStyle(
+                          fontSize: 10.0,
+                          color: Colors.white
+                      ),),
+                  ),
 
 
 
+                  new Padding(padding: EdgeInsets.all(10.0)),
 
-              ],
+                  new Container(
+                      alignment: Alignment.bottomCenter,
+                      child:  new MaterialButton(
+                          minWidth: 240.0,
+                          height: 30.0,
+                          color: Colors.red,
+                          onPressed: resetQuiz,
+                          child: new Text("Quit",
+                            style: new TextStyle(
+                                fontSize: 8.0,
+                                color: Colors.white
+                            ),)
+                      )
+                  ),
+
+
+                ],
+              ),
             ),
           ),
 
