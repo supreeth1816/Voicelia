@@ -71,7 +71,6 @@ class _StartScreenState extends State<StartScreen> {
                   ),
                   width: 340,
                   height: 48,
-
                   child: Center(child: Text("Get Started", style: GoogleFonts.poppins(
                     color:  Colors.black87,
                     fontWeight: FontWeight.w600,

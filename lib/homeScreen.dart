@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voicelia/autismTest.dart';
 import 'package:voicelia/speechScreen.dart';
+import 'package:voicelia/startQuizScreen.dart';
 
 
 String EnteredText;
@@ -132,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 24,),
 
               GestureDetector(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Quiz1())),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => StartQuiz())),
                 child: Container(
                   margin: EdgeInsets.only(left: 24, right: 24),
 

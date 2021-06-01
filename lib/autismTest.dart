@@ -278,12 +278,6 @@ class Quiz1State extends State<Quiz1> {
                       attemptedquestionsB4++;
                     }
 
-//                        if(quiz.choices[questionNumber][0] == quiz.correctAnswers[questionNumber]){
-//                          debugPrint("Correct");
-//                          finalScore++;
-//                        }else{
-//                          debugPrint("Wrong");
-//                        }
 
                     updateQuestion();
                   },
