@@ -44,48 +44,64 @@ class AnimalQuiz{
 
     //domain A1 social-emotional reciprocity
 
-    "${NameText} has an unusual approach to people",
-    "X can use you or others as a tool (i.e. hold your hand and point to things with your hand or use it like attempting to open a door turning the knob with your hand))",
-    "It feels like X doesn’t respond when X’s name is called or when X is spoken directly to",
-    "It feels like X is having a one-sided conversation with you- as if X is not interested in your side of conversation",
-    "X sticks to his agenda in a conversation- often speaking at you or rather over you",
-    "X doesn’t add on to a conversation to keep it going or to repair it",
-    "X does not attempt to clarify or provide extra background information if not understood",
-    "X does not like to share toys, objects (e.g. food) or space (like on a sofa)",
-    "X does not show or point out objects to other people to share his interest (e.g. helicopter, airplane in the sky or a train/ bus at a distance)",
-    "X does not show interest in displaying his achievements (like a sticker, certificate from school or drawing he has made)",
-    "X does not respond to a social smile (smile to a greeting) from a friendly stranger (Note: the focus here is on the response to another person’s smile; other aspects of emotional expression should be considered under A2).",
-    "X doesn’t seem to share x’s enjoyment, excitement, achievements with others",
-    "When X is happy, X does not seem to share this feeling with others",
-    "X doesn’t seem to respond appropriately to praise or a nice compliment about him",
-    "X does not show any evidence of happiness or excitement with other children’s excitement or pleasure (like in another child’s birthday party)",
-    "X doesn’t seem to offer comfort to others when they are hurt or upset- and would rather ignore or walk away from the situation",
-    "X doesn’t look at you for assurance or encouragement",
-    "X is indifferent to or dislikes physical contact or show of affection (i.e. a cuddle or a kiss)",
-    "X does not show interest in children of his own age and approach them on his own to interact/ play with them, unless compelled to do so",
-    "X doesn’t initiate ‘small talk’ or a ‘social chit-chat’ to be friendly",
-    "X only initiates interaction to get help from someone",
-    "X fails to understand the rules of simple games like taking turns, following others",
-    "X does not spontaneously enter the spirit or fun of the game",
-    "X does not copy what other children do",
-    "X does not seem to imitate people in the family when X was very young (i.e. imitating household chores like mowing the lawn, ironing etc)", //index24
+
+    "${NameText} has an unusual approach to people", //1
+  //  "X can use you or others as a tool (i.e. hold your hand and point to things with your hand or use it like attempting to open a door turning the knob with your hand))",
+    "It feels like ${NameText} doesn’t respond when ${NameText}’s name is called", //2
+
+  //  "It feels like X is having a one-sided conversation with you- as if X is not interested in your side of conversation",
+  //   "X sticks to his agenda in a conversation- often speaking at you or rather over you",
+
+    "${NameText} doesn’t add on to a conversation and feels reluctant", //3
+
+  //  "X does not attempt to clarify or provide extra background information if not understood",
+
+    "${NameText} does not like to share toys with other ${AgeText} year-olds",
+
+  //  "X does not show or point out objects to other people to share his interest (e.g. helicopter, airplane in the sky or a train/ bus at a distance)",
+
+  //  "X does not show interest in displaying his achievements (like a sticker, certificate from school or drawing he has made)",
+
+    "${NameText} does not respond to a friendly stranger.",
+
+    "${NameText} doesn’t seem to share enjoyment, excitement, achievements with others",
+
+   // "When X is happy, X does not seem to share this feeling with others",
+
+  //  "X doesn’t seem to respond appropriately to praise or a nice compliment about him",
+
+ //   "X does not show any evidence of happiness or excitement with other children’s excitement or pleasure (like in another child’s birthday party)",
+  //  "X doesn’t seem to offer comfort to others when they are hurt or upset- and would rather ignore or walk away from the situation",
+    "When there is a problem, ${NameText} doesn’t look at you for encouragement",
+
+   // "X is indifferent to or dislikes physical contact or show of affection (i.e. a cuddle or a kiss)",
+    "${NameText} doesn't interact with people of around ${AgeText} years old",
+  //  "X doesn’t initiate ‘small talk’ or a ‘social chit-chat’ to be friendly",
+
+    "${NameText} only initiates interaction to get help from someone",
+
+  //  "X fails to understand the rules of simple games like taking turns, following others",
+  //  "X does not spontaneously enter the spirit or fun of the game",
+  //  "X does not copy what other children do",
+    "When ${NameText} was very young, ${NameText} didn't seem to imitate family members ", //index24 //index9
 
 
     //domain A2 Non verbal communication
 
     "${NameText}’s facial expressions are limited",
-    "X has an unusual approach to people (intrusive touching or licking)",
-    "X does not use or understand body postures (i.e. seen to be looking away from someone who is talking to him- or understand that other person is not interested from their body language)",
-    "X does not use gestures appropriately (e.g. actions like pointing, waving, nodding/shaking head, beckoning, shushing, putting out hands to ask for something)",
-    "X does not understand gestures appropriately (e.g. actions as above)",
-    "X does not understand change in tone of voice indicating request to change behaviour",
-    "X has an unusual way of talking (abnormal volume, pitch, intonation, rate, rhythm, stress or prosody in speech)",
-    "You cannot understand from X’s facial expression what X feels like",
-    "X doesn’t show a warm, joyful expression when facing others",
-    "X is unable to understand or interpret other’s facial expressions",
-    "X has a difficulty in putting together eye contact facial expressions with gestures and body postures (Coordinating non-verbal communication)",
-    "X is unable to put together facial expressions, eye contact, gestures and body language to match the words X is coming out with i.e. asking for help or getting other person’s attention to something he is anxious/worried about",
-    "X has a difficulty in conveying his thoughts, feelings and emotions using words, facial expressions, tone of voice, gestures and body language (postures)",
+
+   // "X has an unusual approach to people (intrusive touching or licking)",
+  //  "X does not use or understand body postures (i.e. seen to be looking away from someone who is talking to him- or understand that other person is not interested from their body language)",
+    "${NameText} does not use gestures appropriately",
+   // "X does not understand gestures appropriately (e.g. actions as above)",
+  //  "X does not understand change in tone of voice indicating request to change behaviour",
+    "${NameText} has an unusual way of talking (abnormal volume, pitch)",
+    "You cannot understand from ${NameText}’s facial expression what ${NameText} feels like",
+   // "X doesn’t show a warm, joyful expression when facing others",
+   // "X is unable to understand or interpret other’s facial expressions",
+  // "X has a difficulty in putting together eye contact facial expressions with gestures and body postures (Coordinating non-verbal communication)",
+  //  "X is unable to put together facial expressions, eye contact, gestures and body language to match the words X is coming out with i.e. asking for help or getting other person’s attention to something he is anxious/worried about",
+    "${NameText} has a difficulty in conveying his thoughts, feelings and emotions using facial expressions",
 
 
     //domain A3 Relationships
@@ -227,18 +243,34 @@ class Quiz1State extends State<Quiz1> {
 
 
 
+
                   SizedBox(height: 20,),
+                  Row(
+                    children: [
 
-                  Container(
-                    padding: EdgeInsets.only(top: 0, left: 36),
-                    width: double.infinity,
-                    child: Text("Voicelia",
-                      style: GoogleFonts.satisfy(
-                          fontSize: 30,
-                          color: Color(0xfff06083)
+                      GestureDetector(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => StartQuiz())),
+                        child: Container(
+                          padding: EdgeInsets.only(left: 16),
 
-                      ),),
+                          child: Icon(Icons.arrow_back_ios_outlined, color: Colors.black26,),),
+                      ),
+
+                      Container(
+                        padding: EdgeInsets.only(top: 0, left: 20),
+                        //width: double.infinity,
+                        child: Text("Voicelia",
+                          style: GoogleFonts.satisfy(
+                              fontSize: 30,
+
+                              color: Color(0xfff06083)
+
+                          ),),
+                      ),
+                    ],
                   ),
+
+                  SizedBox(height: 20,),
 
 
                   new Container(
@@ -248,7 +280,7 @@ class Quiz1State extends State<Quiz1> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
 
-                        new Text("Question ${questionNumber + 1} of ${quiz.questions.length}",
+                        new Text("Statement ${questionNumber + 1} of ${quiz.questions.length}",
                           style: GoogleFonts.poppins(
                               fontSize: 15.0,
                               color: Colors.black54
@@ -262,12 +294,16 @@ class Quiz1State extends State<Quiz1> {
 
 
 
+                  Container(
+                    padding: EdgeInsets.only(top: 0, left: 36, right: 36),
+                    child: new Text(quiz.questions[questionNumber],
+                      style: GoogleFonts.poppins(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey.shade700
 
-
-                  new Text(quiz.questions[questionNumber],
-                    style: new TextStyle(
-                      fontSize: 20.0,
-                    ),),
+                      ),),
+                  ),
 
                   new Padding(padding: EdgeInsets.all(10.0)),
 
@@ -275,13 +311,8 @@ class Quiz1State extends State<Quiz1> {
 
                   //button 1
                   //never seen an issue 0
-
-                  new MaterialButton(
-
-                    minWidth: 120.0,
-                    color: Colors.blueGrey,
-                    onPressed: (){
-
+                  GestureDetector(
+                    onTap: (){
                       if(questionNumber < 25){
                         attemptedquestionsA1++;
                       }else if (questionNumber <38) {
@@ -297,27 +328,60 @@ class Quiz1State extends State<Quiz1> {
                       }else if (questionNumber < 105) {
                         attemptedquestionsB4++;
                       }
-
-
                       updateQuestion();
                     },
-                    child: new Text(quiz.choices[0],
-                      style: new TextStyle(
-                          fontSize: 10.0,
-                          color: Colors.white
-                      ),),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(width: 2, color: Color(0xfff06083)),
+
+                        color: Colors.transparent,
+                      ),
+                      width: 360,
+                      height: 60,
+                      child: Row(children:
+                      [
+                       SizedBox(width: 20,),
+                        Text("A",
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            color:  Color(0xfff06083),
+                            fontWeight: FontWeight.w400,
+                          ),
+
+                        ),
+
+                        Container(
+                          padding: EdgeInsets.only(left: 10, right: 10),
+                          child: Text("|",
+                            style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              color:  Color(0xfff06083),
+                              fontWeight: FontWeight.w400,
+                            ),
+
+                          ),
+                        ),
+
+                      Text(quiz.choices[0], style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        color:  Colors.grey.shade600,
+                        fontWeight: FontWeight.w400,
+                      ),
+
+                      ) ],
+                      ),
+
+                    ),
                   ),
 
-                  new Padding(padding: EdgeInsets.all(10.0)),
+                  SizedBox(height: 24,),
+
 
                   //button 2
-                  //Was an Issue , Not Anymore 1
-                  new MaterialButton(
-
-                    //
-                    minWidth: 120.0,
-                    color: Colors.blueGrey,
-                    onPressed: (){
+                  //was an issue, not anymore
+                  GestureDetector(
+                    onTap: (){
 
                       if(questionNumber < 25){
 
@@ -349,23 +413,57 @@ class Quiz1State extends State<Quiz1> {
                       }
 
                       updateQuestion();
+                      },
 
-                    },
-                    child: new Text(quiz.choices[1],
-                      style: new TextStyle(
-                          fontSize: 10.0,
-                          color: Colors.white
-                      ),),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(width: 2, color: Color(0xfff06083)),
+
+                        color: Colors.transparent,
+                      ),
+                      width: 360,
+                      height: 60,
+                      child: Row(children:
+                      [
+                        SizedBox(width: 20,),
+                        Text("B",
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            color:  Color(0xfff06083),
+                            fontWeight: FontWeight.w400,
+                          ),
+
+                        ),
+
+                        Container(
+                          padding: EdgeInsets.only(left: 10, right: 10),
+                          child: Text("|",
+                            style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              color:  Color(0xfff06083),
+                              fontWeight: FontWeight.w400,
+                            ),
+
+                          ),
+                        ),
+
+                        Text(quiz.choices[1], style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          color:  Colors.grey.shade600,
+                          fontWeight: FontWeight.w400,
+                        ),
+
+                        ) ],
+                      ),
+
+                    ),
                   ),
 
-                  new Padding(padding: EdgeInsets.all(10.0)),
+                  SizedBox(height: 24,),
 
-                  //button 3
-                  //"Ocassionally to Frequently" 2
-                  new MaterialButton(
-                    minWidth: 120.0,
-                    color: Colors.blueGrey,
-                    onPressed: (){
+                  GestureDetector(
+                    onTap: (){
 
                       if(questionNumber < 25){
                         finalScoreA1+=2;
@@ -396,19 +494,55 @@ class Quiz1State extends State<Quiz1> {
 
                       updateQuestion();
                     },
-                    child: new Text(quiz.choices[2],
-                      style: new TextStyle(
-                          fontSize: 10.0,
-                          color: Colors.white
-                      ),),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(width: 2, color: Color(0xfff06083)),
+
+                        color: Colors.transparent,
+                      ),
+                      width: 360,
+                      height: 60,
+                      child: Row(children:
+                      [
+                        SizedBox(width: 20,),
+                        Text("C",
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            color:  Color(0xfff06083),
+                            fontWeight: FontWeight.w400,
+                          ),
+
+                        ),
+
+                        Container(
+                          padding: EdgeInsets.only(left: 10, right: 10),
+                          child: Text("|",
+                            style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              color:  Color(0xfff06083),
+                              fontWeight: FontWeight.w400,
+                            ),
+
+                          ),
+                        ),
+
+                        Text(quiz.choices[2], style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          color:  Colors.grey.shade600,
+                          fontWeight: FontWeight.w400,
+                        ),
+
+                        ) ],
+                      ),
+
+                    ),
                   ),
-                  new Padding(padding: EdgeInsets.all(10.0)),
-                  //button 4
-                  //Very Frequently 3
-                  new MaterialButton(
-                    minWidth: 120.0,
-                    color: Colors.blueGrey,
-                    onPressed: (){
+
+                  SizedBox(height: 24,),
+
+                  GestureDetector(
+                    onTap: (){
 
                       if(questionNumber < 25){
                         finalScoreA1+=3;
@@ -440,31 +574,211 @@ class Quiz1State extends State<Quiz1> {
                       updateQuestion();
 
                     },
-                    child: new Text(quiz.choices[3],
-                      style: new TextStyle(
-                          fontSize: 10.0,
-                          color: Colors.white
-                      ),),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(width: 2, color: Color(0xfff06083)),
+
+                        color: Colors.transparent,
+                      ),
+                      width: 360,
+                      height: 60,
+                      child: Row(children:
+                      [
+                        SizedBox(width: 20,),
+                        Text("D",
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            color:  Color(0xfff06083),
+                            fontWeight: FontWeight.w400,
+                          ),
+
+                        ),
+
+                        Container(
+                          padding: EdgeInsets.only(left: 10, right: 10),
+                          child: Text("|",
+                            style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              color:  Color(0xfff06083),
+                              fontWeight: FontWeight.w400,
+                            ),
+
+                          ),
+                        ),
+
+                        Text(quiz.choices[3], style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          color:  Colors.grey.shade600,
+                          fontWeight: FontWeight.w400,
+                        ),
+
+                        ) ],
+                      ),
+
+                    ),
                   ),
 
+                  SizedBox(height: 24,),
+
+
+
+                  //
+                  // //button 2
+                  // //Was an Issue , Not Anymore 1
+                  // new MaterialButton(
+                  //
+                  //   //
+                  //   minWidth: 120.0,
+                  //   color: Colors.blueGrey,
+                  //   onPressed: (){
+                  //
+                  //     if(questionNumber < 25){
+                  //
+                  //       finalScoreA1+=1;
+                  //       attemptedquestionsA1++;
+                  //
+                  //     }else if (questionNumber <38) {
+                  //       finalScoreA2+=1;
+                  //       attemptedquestionsA2++;
+                  //     }else if (questionNumber < 63) {
+                  //       finalScoreA3+=1;
+                  //       attemptedquestionsA3++;
+                  //     }else if (questionNumber < 77) {
+                  //       finalScoreB1+=1;
+                  //       attemptedquestionsB1++;
+                  //     }else if (questionNumber < 88) {
+                  //       finalScoreB2+=1;
+                  //       attemptedquestionsB2++;
+                  //     }else if (questionNumber < 97) {
+                  //       finalScoreB3+=1;
+                  //       attemptedquestionsB3++;
+                  //     }else if (questionNumber < 105) {
+                  //       finalScoreB4+=1;
+                  //       attemptedquestionsB4++;
+                  //     }else if (questionNumber == 105) {
+                  //       finalScoreC = 1;
+                  //     }else if (questionNumber == 106) {
+                  //       finalScoreD = 1;
+                  //     }
+                  //
+                  //     updateQuestion();
+                  //
+                  //     },
+                  //   child: new Text(quiz.choices[1],
+                  //     style: new TextStyle(
+                  //         fontSize: 10.0,
+                  //         color: Colors.white
+                  //     ),),
+                  // ),
+
+                  // new Padding(padding: EdgeInsets.all(10.0)),
+                  //
+                  // //button 3
+                  // //"Ocassionally to Frequently" 2
+                  // new MaterialButton(
+                  //   minWidth: 120.0,
+                  //   color: Colors.blueGrey,
+                  //   onPressed: (){
+                  //
+                  //     if(questionNumber < 25){
+                  //       finalScoreA1+=2;
+                  //       attemptedquestionsA1++;
+                  //     }else if (questionNumber <38) {
+                  //       finalScoreA2+=2;
+                  //       attemptedquestionsA2++;
+                  //     }else if (questionNumber < 63) {
+                  //       finalScoreA3+=2;
+                  //       attemptedquestionsA3++;
+                  //     }else if (questionNumber < 77) {
+                  //       finalScoreB1+=2;
+                  //       attemptedquestionsB1++;
+                  //     }else if (questionNumber < 88) {
+                  //       finalScoreB2+=2;
+                  //       attemptedquestionsB2++;
+                  //     }else if (questionNumber < 97) {
+                  //       finalScoreB3+=2;
+                  //       attemptedquestionsB3++;
+                  //     }else if (questionNumber < 105) {
+                  //       finalScoreB4+=2;
+                  //       attemptedquestionsB4++;
+                  //     }else if (questionNumber == 105) {
+                  //       finalScoreC = 2;
+                  //     }else if (questionNumber == 106) {
+                  //       finalScoreD = 2;
+                  //     }
+                  //
+                  //     updateQuestion();
+                  //   },
+                  //   child: new Text(quiz.choices[2],
+                  //     style: new TextStyle(
+                  //         fontSize: 10.0,
+                  //         color: Colors.white
+                  //     ),),
+                  // ),
+                  // new Padding(padding: EdgeInsets.all(10.0)),
+                  // //button 4
+                  // //Very Frequently 3
+                  // new MaterialButton(
+                  //   minWidth: 120.0,
+                  //   color: Colors.blueGrey,
+                  //   onPressed: (){
+                  //
+                  //     if(questionNumber < 25){
+                  //       finalScoreA1+=3;
+                  //       attemptedquestionsA1++;
+                  //     }else if (questionNumber <38) {
+                  //       finalScoreA2+=3;
+                  //       attemptedquestionsA2++;
+                  //     }else if (questionNumber < 63) {
+                  //       finalScoreA3+=3;
+                  //       attemptedquestionsA3++;
+                  //     }else if (questionNumber < 77) {
+                  //       finalScoreB1+=3;
+                  //       attemptedquestionsB1++;
+                  //     }else if (questionNumber < 88) {
+                  //       finalScoreB2+=3;
+                  //       attemptedquestionsB2++;
+                  //     }else if (questionNumber < 97) {
+                  //       finalScoreB3+=3;
+                  //       attemptedquestionsB3++;
+                  //     }else if (questionNumber < 105) {
+                  //       finalScoreB4+=3;
+                  //       attemptedquestionsB4++;
+                  //     }else if (questionNumber == 105) {
+                  //       finalScoreC = 3;
+                  //     }else if (questionNumber == 106) {
+                  //       finalScoreD = 3;
+                  //     }
+                  //
+                  //     updateQuestion();
+                  //
+                  //   },
+                  //   child: new Text(quiz.choices[3],
+                  //     style: new TextStyle(
+                  //         fontSize: 10.0,
+                  //         color: Colors.white
+                  //     ),),
+                  // ),
+                  //
 
 
                   new Padding(padding: EdgeInsets.all(10.0)),
 
-                  new Container(
-                      alignment: Alignment.bottomCenter,
-                      child:  new MaterialButton(
-                          minWidth: 240.0,
-                          height: 30.0,
-                          color: Colors.red,
-                          onPressed: resetQuiz,
-                          child: new Text("Quit",
-                            style: new TextStyle(
-                                fontSize: 8.0,
-                                color: Colors.white
-                            ),)
-                      )
-                  ),
+                  // new Container(
+                  //     alignment: Alignment.bottomCenter,
+                  //     child:  new MaterialButton(
+                  //         minWidth: 240.0,
+                  //         height: 30.0,
+                  //         color: Colors.red,
+                  //         onPressed: resetQuiz,
+                  //         child: new Text("Re",
+                  //           style: new TextStyle(
+                  //               fontSize: 8.0,
+                  //               color: Colors.white
+                  //           ),)
+                  //     )
+                  // ),
 
 
                 ],
